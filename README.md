@@ -109,7 +109,7 @@ life-money-skill/
 
 ## 安装
 
-本仓库是**开发仓库（唯一真源）**，Hermes 中的安装副本为薄路由。安装动作待开发完成后进行（当前搁置）。
+本仓库是**开发仓库（唯一真源）**，Hermes 中的安装副本为薄路由。安装到 Hermes 待定（当前未安装）。
 
 ```bash
 git clone https://github.com/LuoJiangYong/life-money-skill.git
@@ -143,4 +143,4 @@ CI 每次 push 自动运行同一套检查 + 仓库边界检查（`projects/` �
 
 ## 版本
 
-v0.1.0 —— Phase 0-4 完成（开发中；安装待定）
+v0.1.0 —— 完整诊断管线：访谈建档 → 7 轮分析 → 单文件 HTML 报告（含 4 组可视化）；零依赖自检脚本 + CI 质量门。（安装到 Hermes 待定）

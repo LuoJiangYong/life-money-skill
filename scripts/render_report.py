@@ -597,7 +597,7 @@ def build_html(analysis: dict, profile: dict, css: str, prompts) -> tuple[str, d
 
     # ── 附录 A ──
     sec_appendix_a = band(
-        f'{sec_head("附录 A", "7 个原始提示词", "本报告方法论使用的全部原始指令，可复制到任意 AI 助手中复用。")}'
+        f'{sec_head("附录 A", "原始提示词（来源 @Raul_IA_Prod）", "本报告方法论使用的全部原始指令，可复制到任意 AI 助手中复用。")}'
         f'<div class="prompts">{prompts_html(prompts)}'
         f'<p class="prompts__cap">以上为 canonical 原文，未做改写。</p></div>',
         "dark",
