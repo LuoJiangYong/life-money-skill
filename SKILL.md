@@ -1,7 +1,7 @@
 ---
 name: life-money-skill
 description: "当用户要做职业变现/搞钱诊断、梳理隐藏技能、规划副业收入或 90 天计划时使用。访谈建档 → 7 轮分析 → HTML 报告。"
-version: 0.1.0
+version: 1.0.0
 ---
 
 # Life Money Skill — 路由中枢
