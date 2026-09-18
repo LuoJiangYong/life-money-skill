@@ -1,6 +1,6 @@
 # Life Money Skill — 人生搞钱诊断
 
-把「7 提示词职业变现法」做成一件事能跑完的诊断：**访谈建档 → 7 轮分析 → 一份能直接看的 HTML 报告**。
+把职业变现诊断做成一件事能跑完的流程：**访谈建档 → 7 轮分析 → 一份能直接看的 HTML 报告**。
 
 > Send your résumé and career story in, get a single-file HTML career-monetization diagnostic out — hidden skills, income opportunities, leverage, higher-pay directions, AI side services and a 90-day plan.
 
@@ -128,6 +128,16 @@ python scripts/verify_repo.py
 3. **结构核对** —— 组件计数精确匹配（10 / 10 / 5 / 3 / 5 / 7 / 3 / 5 / 10）
 
 CI 每次 push 自动运行同一套检查 + 仓库边界检查（`projects/` 不得入库）。
+
+---
+
+## 来源与致谢
+
+本 Skill 的方法论源自 X 用户 **@Raul_IA_Prod** 的 7 段提示词（西班牙语原作，经翻译与本地化整理）——用结构化提问把「我不知道自己能做什么」变成可执行的变现路径。7 轮分析维度按其方法重构，报告附录保留这 7 段提示词的 canonical 原文以便复用。
+
+> canonical 原文：[`references/seven-prompts.md`](references/seven-prompts.md)
+>
+> Methodology adapted from @Raul_IA_Prod's 7 prompts on X (originally in Spanish).
 
 ---
 
