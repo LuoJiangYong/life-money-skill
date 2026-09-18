@@ -1,5 +1,7 @@
 # Life Money Skill — 人生搞钱诊断
 
+**简体中文** ｜ [English](README.en.md)
+
 把职业变现诊断做成一件事能跑完的流程：**访谈建档 → 7 轮分析 → 一份能直接看的 HTML 报告**。
 
 > Send your résumé and career story in, get a single-file HTML career-monetization diagnostic out — hidden skills, income opportunities, leverage, higher-pay directions, AI side services and a 90-day plan.
@@ -87,6 +89,8 @@ Agent 会自动走：建档（要材料 + 访谈补全）→ 7 轮分析（中�
 life-money-skill/
 ├── SKILL.md                     ← 路由中枢（入口）
 ├── CONSTITUTION.md              ← 设计宪法（5 原则 / 7 维度 / 禁止模式）
+├── README.md / README.en.md     ← 中文 / English 说明
+├── LICENSE                      ← MIT
 ├── references/                  ← 领域知识（按需加载）
 │   ├── seven-prompts.md         ← 7 提示词 canonical 原文（唯一真源）
 │   ├── interview-guide.md       ← 建档协议 + 门禁 1
@@ -138,6 +142,12 @@ CI 每次 push 自动运行同一套检查 + 仓库边界检查（`projects/` �
 > canonical 原文：[`references/seven-prompts.md`](references/seven-prompts.md)
 >
 > Methodology adapted from @Raul_IA_Prod's 7 prompts on X (originally in Spanish).
+
+---
+
+## 许可证
+
+[MIT](LICENSE) © 2026 Jiang Yong Luo
 
 ---
 

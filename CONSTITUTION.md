@@ -12,7 +12,7 @@
 
 把「7 提示词职业变现法」（原作者 X @Raul_IA_Prod）产品化为 Hermes 内的职业变现诊断 Skill：
 
-**材料收集（门禁 1：简历 / 项目报告 / 作品集 + 访谈）→ profile.json → 7 轮结构化分析（含门禁 2/3）→ analysis.json → 单文件 HTML 诊断报告（设计语言）**
+**材料收集（门禁 1：简历 / 项目报告 / 作品集 + 访谈）→ profile.json → 7 轮结构化分析（含门禁 2/3）→ analysis.json → 单文件 HTML 诊断报告**
 
 - 是：个人职业变现诊断 + 报告生产；本地、私有、可重复运行。
 - 不是：不承诺收入结果；非招聘 / 投递工具；不自动对外发布；不做多租户平台。
@@ -60,7 +60,7 @@ life-money-skill/
 │   ├── seven-prompts.md      # 7 提示词 canonical 原文（唯一真源）
 │   ├── interview-guide.md    # 访谈协议 + 材料解析规则（简历/项目报告/作品集）+ 门禁 1
 │   ├── analysis-specs.md     # 7 轮分析输出规格 / 质量标准 / 反模式（含门禁 2/3）
-│   ├── report-design.md      # 报告设计系统（中文适配）
+│   ├── report-design.md      # 报告设计系统（中文适配 + tokens）
 │   ├── data-calibration.md   # 市场数据校准检索指南（可选步骤）
 │   └── cases/                # 案例库（INDEX + _TEMPLATE + 案例文件）
 │       ├── INDEX.md
