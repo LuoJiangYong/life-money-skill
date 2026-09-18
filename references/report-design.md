@@ -85,16 +85,27 @@
 | 00 | 封面 | 大标题 + 身份行 + 日期 + 目标徽章（珊瑚） | canvas |
 | 01 | 摘要 | highlights 列表卡；assumptions 以小字注记条呈现 | canvas |
 | 02 | 隐藏技能 | 2-up 卡片网格（name + 价值 / 谁付费 / AI 货币化 三段） | soft 带 |
-| 03 | 收入机会 | 卡片列表：标题 + 描述 + 四属性行（成本 / 时间 / 难度 / 潜力）+ first_step 高亮行 | canvas |
+| 03 | 收入机会 | 机会矩阵图 + 卡片列表：标题 + 描述 + 四属性行（成本 / 时间 / 难度 / 潜力）+ first_step 高亮行 | canvas |
 | 04 | 变现路径 | 按 type 分组（服务 / 咨询 / 数字产品 / 自由职业），组小标题 + 卡片 | soft 带 |
 | 05 | 最大杠杆 | rank1 珊瑚强调卡（大字号 focus + rationale）；rank2/3 次级卡 | canvas + 珊瑚卡 |
-| 06 | 高薪方向 | 对照列表：方向 + 更高薪原因 + 资格说明 + pay_gap 徽章 | canvas |
-| 07 | AI 副业服务 | 5 张卡：服务名 + 描述 + 周时间徽章 + 定价 | soft 带 |
-| 08 | 90 天计划 | 三段时间线：阶段名 + focus + actions + milestone 徽章 | canvas |
+| 06 | 高薪方向 | 薪酬阶梯图 + 对照列表：方向 + 更高薪原因 + 资格说明 + 薪酬徽章 | soft 带 |
+| 07 | AI 副业服务 | 时间预算图 + 5 张卡：服务名 + 描述 + 周时间徽章 + 定价 | canvas |
+| 08 | 90 天计划 | 三段时间线：阶段名 + focus + actions + milestone 徽章 | soft 带 |
 | 09 | 附录 A | 7 提示词（深色 code 卡，可复制） | surface-dark |
 | 10 | 附录 B | 校准来源（如有）+ 免责声明 + 生成时间（小字） | canvas |
 
 **节奏规则**：不允许连续两个相同 surface 的章节带；深色只出现在附录 A（及少量卡内点缀），深色收尾。
+
+### 可视化图示（4 组，Phase 3 起内置）
+
+| 图 | 位置 | 形式 | 数据来源 | 降级规则 |
+|---|---|---|---|---|
+| 机会矩阵 | §02 收入机会 | 象限图：x=难度（低/中/高）、y=潜力量级（1-5）；编号泡泡 + 图例列表 | `difficulty` + `potential_level` | 有效评级 <4 条时整图省略（不虚构） |
+| 薪酬阶梯 | §05 高薪方向 | 横向区间条（low→high）+ 虚线标记「你当前」 | `pay_monthly_low/high` + profile 薪资 | 无任何薪酬数字则省略；口径写入脚注 |
+| 时间预算条 | §06 AI 副业 | 横向条（每服务 weekly_hours）+ 虚线「每周可投入」 | `weekly_hours` + 门禁 3 值 | 门禁值缺失时只画条、不画线 |
+| 90 天时间线 | §07 计划 | 时间线：3 节点 + 里程碑徽章 | `plan_90d.phases` | 无（结构必填） |
+
+图表设计规则：坐标轴 hairline `#e6dfd8`、刻度文字 12px muted；数据点/条用 ink 或珊瑚（重点项珊瑚）；**禁止**渐变、3D、阴影、图表杂讯；SVG 内联生成（离线、无 JS 依赖）；每图配 1 行 12px 图注说明口径。
 
 ## 四、组件规则
 
@@ -109,6 +120,7 @@
 - **单文件 HTML**：CSS 内嵌、零外部请求；字体走本机字体栈；离线打开即读、无 JS 依赖
 - `@media print`：A4；卡片 `break-inside: avoid`；保留色块（`-webkit-print-color-adjust: exact`）
 - 文件名 `report.html`
+- QA 截图：`agent-browser set viewport 1200 900` → `screenshot --full`（全页 PNG）；长图用 PIL 切片成 ≤1400px 段落供视觉检查（`uv run --with pillow`）
 
 ## 六、Do / Don't（源自设计规范，中文化）
 

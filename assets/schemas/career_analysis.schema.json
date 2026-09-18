@@ -7,7 +7,7 @@
   "additionalProperties": true,
   "required": ["schema_version", "meta", "summary", "hidden_skills", "income_opportunities", "monetization_paths", "leverage", "higher_pay_roles", "ai_services", "plan_90d"],
   "properties": {
-    "schema_version": { "const": "0.2" },
+    "schema_version": { "const": "0.3" },
     "meta": {
       "type": "object",
       "required": ["generated_at"],
@@ -84,6 +84,7 @@
           "time_investment": { "type": "string", "description": "时间投入" },
           "difficulty": { "enum": ["低", "中", "高"] },
           "income_potential": { "type": "string", "description": "收入潜力（对齐用户收入目标口径）" },
+          "potential_level": { "type": "integer", "minimum": 1, "maximum": 5, "description": "收入潜力量级 1-5（报告矩阵图用；相对用户目标评估）" },
           "first_step": { "type": "string", "description": "第一步行动（可执行的具体动作）" }
         }
       }
@@ -136,7 +137,9 @@
           "role_or_industry": { "type": "string", "description": "角色 / 行业 / 机会" },
           "why_higher_pay": { "type": "string", "description": "为什么薪水显著更高" },
           "qualification": { "type": "string", "description": "是什么让用户有资格胜任" },
-          "pay_gap": { "type": "string", "description": "薪资差距参考（如有校准数据，标注口径）" }
+          "pay_gap": { "type": "string", "description": "薪资差距描述（如有校准数据，标注口径）" },
+          "pay_monthly_low": { "type": "number", "description": "该方向月薪参考下限（用户币种；报告薪酬图用，无依据则省略）" },
+          "pay_monthly_high": { "type": "number", "description": "该方向月薪参考上限" }
         }
       }
     },

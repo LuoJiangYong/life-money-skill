@@ -73,7 +73,10 @@ life-money-skill/
 │   ├── schemas/              # 公共契约（Phase 0）
 │   │   ├── career_profile.schema.json
 │   │   └── career_analysis.schema.json
-│   └── templates/            # 报告模板（Phase 3）
+│   └── templates/            # 报告模板（report.css；Phase 3）
+│
+├── examples/                 # 完整示例与设计基准（虚构人设，无真实数据）
+│   └── demo/                 # profile.json + analysis.json + report.html
 │
 ├── projects/                 # 运行产物（.gitignore；含用户敏感数据）
 │   └── <YYYY-MM-DD>-<slug>/
