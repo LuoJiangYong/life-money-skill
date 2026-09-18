@@ -54,7 +54,7 @@ Agent 会自动走：建档（要材料 + 访谈补全）→ 7 轮分析（中�
 | 07 90 天计划 | 三阶段时间线 + 里程碑徽章 |
 | 附录 A / B | 7 个原始提示词（可复制复用）· 来源与免责声明 |
 
-示例成品：[**在线预览**](https://luojiangyong.github.io/life-money-skill/examples/demo/report.html) ｜ [`examples/demo/report.html`](examples/demo/report.html)（虚构人设，非真实数据）
+示例成品：[**在线预览**](https://luojiangyong.com/life-money-skill/examples/demo/report.html) ｜ [`examples/demo/report.html`](examples/demo/report.html)（虚构人设，非真实数据）
 
 ---
 
@@ -64,17 +64,17 @@ Agent 会自动走：建档（要材料 + 访谈补全）→ 7 轮分析（中�
 
 | 封面 · 目标徽章 · 关键发现 | 收入机会矩阵 |
 |---|---|
-| [![封面](docs/images/report-01-cover.jpg)](https://luojiangyong.github.io/life-money-skill/examples/demo/report.html) | [![机会矩阵](docs/images/report-02-matrix.jpg)](https://luojiangyong.github.io/life-money-skill/examples/demo/report.html) |
+| [![封面](docs/images/report-01-cover.jpg)](https://luojiangyong.com/life-money-skill/examples/demo/report.html) | [![机会矩阵](docs/images/report-02-matrix.jpg)](https://luojiangyong.com/life-money-skill/examples/demo/report.html) |
 | 品牌封面 · 目标徽章 · 5 条关键发现 | 难度 × 潜力矩阵，珊瑚 = 优先启动 |
 
 | 薪酬阶梯 | AI 副业时间预算 |
 |---|---|
-| [![薪酬阶梯](docs/images/report-03-salary.jpg)](https://luojiangyong.github.io/life-money-skill/examples/demo/report.html) | [![时间预算](docs/images/report-04-budget.jpg)](https://luojiangyong.github.io/life-money-skill/examples/demo/report.html) |
+| [![薪酬阶梯](docs/images/report-03-salary.jpg)](https://luojiangyong.com/life-money-skill/examples/demo/report.html) | [![时间预算](docs/images/report-04-budget.jpg)](https://luojiangyong.com/life-money-skill/examples/demo/report.html) |
 | 月薪区间对照「你当前」虚线 | 每个 AI 服务周工时 ≤ 每周可投入 |
 
 | 90 天计划时间线 | 原始提示词（深色附录） |
 |---|---|
-| [![时间线](docs/images/report-05-timeline.jpg)](https://luojiangyong.github.io/life-money-skill/examples/demo/report.html) | [![原始提示词](docs/images/report-06-prompts.jpg)](https://luojiangyong.github.io/life-money-skill/examples/demo/report.html) |
+| [![时间线](docs/images/report-05-timeline.jpg)](https://luojiangyong.com/life-money-skill/examples/demo/report.html) | [![原始提示词](docs/images/report-06-prompts.jpg)](https://luojiangyong.com/life-money-skill/examples/demo/report.html) |
 | 三阶段行动 + 可验证里程碑 | 7 段 canonical 原文，可复制复用 |
 
 ---

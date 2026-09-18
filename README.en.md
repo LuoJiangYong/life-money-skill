@@ -50,7 +50,7 @@ The Agent then runs: intake (materials + interview) → 7-round analysis (2 mid-
 | 07 90-day plan | Three-phase timeline + milestones |
 | Appendix A / B | The original prompts (copy-paste ready) · sources & disclaimer |
 
-Example output: [**live preview**](https://luojiangyong.github.io/life-money-skill/examples/demo/report.html) | [`examples/demo/report.html`](examples/demo/report.html) — fictional persona, not real data.
+Example output: [**live preview**](https://luojiangyong.com/life-money-skill/examples/demo/report.html) | [`examples/demo/report.html`](examples/demo/report.html) — fictional persona, not real data.
 
 ## Report preview
 
@@ -58,17 +58,17 @@ Example output: [**live preview**](https://luojiangyong.github.io/life-money-ski
 
 | Cover · target badge · key findings | Opportunity matrix |
 |---|---|
-| [![Cover](docs/images/report-01-cover.jpg)](https://luojiangyong.github.io/life-money-skill/examples/demo/report.html) | [![Matrix](docs/images/report-02-matrix.jpg)](https://luojiangyong.github.io/life-money-skill/examples/demo/report.html) |
+| [![Cover](docs/images/report-01-cover.jpg)](https://luojiangyong.com/life-money-skill/examples/demo/report.html) | [![Matrix](docs/images/report-02-matrix.jpg)](https://luojiangyong.com/life-money-skill/examples/demo/report.html) |
 | Cover · target badge · 5 key findings | Difficulty × potential, coral = start first |
 
 | Salary ladder | AI service time budget |
 |---|---|
-| [![Salary ladder](docs/images/report-03-salary.jpg)](https://luojiangyong.github.io/life-money-skill/examples/demo/report.html) | [![Time budget](docs/images/report-04-budget.jpg)](https://luojiangyong.github.io/life-money-skill/examples/demo/report.html) |
+| [![Salary ladder](docs/images/report-03-salary.jpg)](https://luojiangyong.com/life-money-skill/examples/demo/report.html) | [![Time budget](docs/images/report-04-budget.jpg)](https://luojiangyong.com/life-money-skill/examples/demo/report.html) |
 | Pay ranges vs. "your current" line | Weekly hours per service ≤ your budget |
 
 | 90-day plan timeline | Original prompts (dark appendix) |
 |---|---|
-| [![Timeline](docs/images/report-05-timeline.jpg)](https://luojiangyong.github.io/life-money-skill/examples/demo/report.html) | [![Prompts](docs/images/report-06-prompts.jpg)](https://luojiangyong.github.io/life-money-skill/examples/demo/report.html) |
+| [![Timeline](docs/images/report-05-timeline.jpg)](https://luojiangyong.com/life-money-skill/examples/demo/report.html) | [![Prompts](docs/images/report-06-prompts.jpg)](https://luojiangyong.com/life-money-skill/examples/demo/report.html) |
 | Three phases + verifiable milestones | The 7 canonical prompts, copy-paste ready |
 
 ## Workflow
