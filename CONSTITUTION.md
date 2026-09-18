@@ -62,12 +62,13 @@ life-money-skill/
 │   ├── analysis-specs.md     # 7 轮分析输出规格 / 质量标准 / 反模式（含门禁 2/3）
 │   ├── report-design.md      # 报告设计系统（中文适配）
 │   ├── data-calibration.md   # 市场数据校准检索指南（可选步骤）
-│   └── cases/                # 案例库（骨架；首个案例 Phase 4）
+│   └── cases/                # 案例库（INDEX + _TEMPLATE + 案例文件）
 │       ├── INDEX.md
 │       └── _TEMPLATE.md
 │
-├── scripts/                  # 确定性逻辑（Phase 3）
-│   └── render_report.py      # analysis.json → report.html（校验 + 渲染）
+├── scripts/                  # 确定性逻辑
+│   ├── render_report.py      # analysis.json → report.html（校验 + 渲染）
+│   └── verify_repo.py        # 仓库自检（契约 + 渲染冒烟 + 结构核对）
 │
 ├── assets/
 │   ├── schemas/              # 公共契约（Phase 0）
