@@ -79,6 +79,8 @@ life-money-skill/
 ├── examples/                 # 完整示例与设计基准（虚构人设，无真实数据）
 │   └── demo/                 # profile.json + analysis.json + report.html
 │
+├── docs/images/              # README 素材（报告预览截图）
+│
 ├── projects/                 # 运行产物（.gitignore；含用户敏感数据）
 │   └── <YYYY-MM-DD>-<slug>/
 │       ├── profile.json

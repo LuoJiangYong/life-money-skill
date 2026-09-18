@@ -50,7 +50,26 @@ The Agent then runs: intake (materials + interview) → 7-round analysis (2 mid-
 | 07 90-day plan | Three-phase timeline + milestones |
 | Appendix A / B | The original prompts (copy-paste ready) · sources & disclaimer |
 
-Example output: [`examples/demo/report.html`](examples/demo/report.html) — fictional persona, not real data.
+Example output: [**live preview**](https://luojiangyong.github.io/life-money-skill/examples/demo/report.html) | [`examples/demo/report.html`](examples/demo/report.html) — fictional persona, not real data.
+
+## Report preview
+
+> Click any image to open the **live report** (rendered via GitHub Pages).
+
+| Cover · target badge · key findings | Opportunity matrix |
+|---|---|
+| [![Cover](docs/images/report-01-cover.jpg)](https://luojiangyong.github.io/life-money-skill/examples/demo/report.html) | [![Matrix](docs/images/report-02-matrix.jpg)](https://luojiangyong.github.io/life-money-skill/examples/demo/report.html) |
+| Cover · target badge · 5 key findings | Difficulty × potential, coral = start first |
+
+| Salary ladder | AI service time budget |
+|---|---|
+| [![Salary ladder](docs/images/report-03-salary.jpg)](https://luojiangyong.github.io/life-money-skill/examples/demo/report.html) | [![Time budget](docs/images/report-04-budget.jpg)](https://luojiangyong.github.io/life-money-skill/examples/demo/report.html) |
+| Pay ranges vs. "your current" line | Weekly hours per service ≤ your budget |
+
+| 90-day plan timeline | Original prompts (dark appendix) |
+|---|---|
+| [![Timeline](docs/images/report-05-timeline.jpg)](https://luojiangyong.github.io/life-money-skill/examples/demo/report.html) | [![Prompts](docs/images/report-06-prompts.jpg)](https://luojiangyong.github.io/life-money-skill/examples/demo/report.html) |
+| Three phases + verifiable milestones | The 7 canonical prompts, copy-paste ready |
 
 ## Workflow
 
@@ -81,6 +100,7 @@ life-money-skill/
 ├── CONSTITUTION.md              ← design constitution (5 principles / 7 dimensions / anti-patterns)
 ├── README.md / README.en.md     ← Chinese / English docs
 ├── LICENSE                      ← MIT
+├── docs/images/                 ← README assets (report preview shots)
 ├── references/                  ← domain knowledge (loaded on demand)
 │   ├── seven-prompts.md         ← canonical prompts (single source of truth)
 │   ├── interview-guide.md       ← intake protocol + Gate 1
