@@ -22,7 +22,7 @@
 ### 1. 高内聚 HIGH COHESION — One module, one job.
 
 - SKILL.md 只做路由与装配；访谈协议、分析规格、报告设计知识、渲染逻辑各归其边界。
-- 7 个提示词的 canonical 原文与溯源只存在于 `references/seven-prompts.md`，任何地方不得复制后各自漂移。
+- 7 个提示词的 canonical 原文只存在于 `references/seven-prompts.md`，任何地方不得复制后各自漂移。
 - 报告版式规则只存在于 `references/report-design.md` + 渲染脚本的设计 token 中，不散落在模板注释里。
 
 ### 2. 低耦合 LOW COUPLING — Share contracts, not internals.
