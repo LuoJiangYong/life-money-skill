@@ -8,7 +8,7 @@
   "required": ["schema_version", "meta", "identity", "salary", "work_history", "skills", "time_budget", "goals"],
   "properties": {
     "schema_version": {
-      "const": "0.1",
+      "const": "0.2",
       "description": "契约版本；破坏性变更时递增，同步检查渲染与分析规格"
     },
     "meta": {
@@ -18,7 +18,7 @@
         "created_at": { "type": "string", "format": "date-time" },
         "source": {
           "enum": ["interview", "resume", "mixed"],
-          "description": "信息采集方式：访谈 / 简历解析 / 两者结合"
+          "description": "信息采集方式：访谈 / 材料解析（简历、项目报告、作品集等）/ 两者结合"
         },
         "resume_filename": {
           "type": "string",
@@ -129,6 +129,13 @@
           "maximum": 168,
           "description": "每周可投入变现探索的小时数"
         },
+        "launch_hours_per_week": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 168,
+          "default": 6,
+          "description": "门禁 3 确认值：每周启动副业可投入时间（默认 6 小时）"
+        },
         "constraints": { "type": "string", "description": "时间约束：加班 / 家庭 / 竞业等" }
       }
     },
@@ -139,8 +146,10 @@
         "primary": { "type": "string", "description": "主要目标（用户原话优先）" },
         "income_target": {
           "type": "object",
+          "description": "门禁 2 确认值：每月额外赚取目标（默认 1000-3000 元 / 月）",
           "properties": {
-            "amount": { "type": "number" },
+            "min_amount": { "type": "number", "description": "目标下限" },
+            "max_amount": { "type": ["number", "null"], "description": "目标上限（可为空）" },
             "currency": { "type": "string" },
             "period": { "enum": ["monthly", "annual"] }
           }

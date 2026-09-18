@@ -3,8 +3,8 @@
 > 本文档定义 Life Money Skill 的最高设计原则、架构约束与禁止模式。
 > 所有 Phase、所有文件、所有决策均受此宪法约束。与本文冲突者，以本文为准。
 >
-> 固化日期：2026-09-18 | 版本：v1.0 | 状态：Phase 0 生效
-> 接手 / 继续开发前必读：`memory/README.md` → `memory/STATUS.md`
+> 固化日期：2026-09-18 | 版本：v1.1 | 状态：Phase 1 生效
+> v1.1（2026-09-18）：落地三道用户门禁；移除 memory/ 治理（用户决定）
 
 ---
 
@@ -12,7 +12,7 @@
 
 把「7 提示词职业变现法」（原作者 X @Raul_IA_Prod）产品化为 Hermes 内的职业变现诊断 Skill：
 
-**访谈 / 简历解析 → profile.json → 7 轮结构化分析 → analysis.json → 单文件 HTML 诊断报告（设计语言）**
+**材料收集（门禁 1：简历 / 项目报告 / 作品集 + 访谈）→ profile.json → 7 轮结构化分析（含门禁 2/3）→ analysis.json → 单文件 HTML 诊断报告（设计语言）**
 
 - 是：个人职业变现诊断 + 报告生产；本地、私有、可重复运行。
 - 不是：不承诺收入结果；非招聘 / 投递工具；不自动对外发布；不做多租户平台。
@@ -39,7 +39,7 @@
 
 ### 4. 易维护 MAINTAINABLE — Traceability over cleverness.
 
-- 7 个提示词的原文、溯源（来源 URL、原作者、采集日期）固化于 `references/seven-prompts.md`；报告附录引用同一来源。
+- 7 个提示词的 canonical 原文固化于 `references/seven-prompts.md`；报告附录引用同一文本，任何地方不得复制后各自漂移。
 - 分析结论必须可回溯到 profile 字段；涉及推断必须在 `summary.assumptions` 显式声明。
 - 渲染产物必须可读回验证（文件存在 + 截图 QA），不得声称未验证的成功。
 
@@ -57,11 +57,14 @@ life-money-skill/
 ├── SKILL.md                  # 路由中枢（Phase 1，正文目标 ≤3500 chars）
 │
 ├── references/               # 领域知识（Phase 1-2）
-│   ├── seven-prompts.md      # 7 提示词 canonical 原文 + 溯源（唯一真源）
-│   ├── interview-guide.md    # 访谈协议 + 简历解析规则 + profile 确认门
-│   ├── analysis-specs.md     # 7 轮分析输出规格 / 质量标准 / 反模式
+│   ├── seven-prompts.md      # 7 提示词 canonical 原文（唯一真源）
+│   ├── interview-guide.md    # 访谈协议 + 材料解析规则（简历/项目报告/作品集）+ 门禁 1
+│   ├── analysis-specs.md     # 7 轮分析输出规格 / 质量标准 / 反模式（含门禁 2/3）
 │   ├── report-design.md      # 报告设计系统（中文适配）
-│   └── data-calibration.md   # 市场数据校准检索指南（可选步骤）
+│   ├── data-calibration.md   # 市场数据校准检索指南（可选步骤）
+│   └── cases/                # 案例库（骨架；首个案例 Phase 4）
+│       ├── INDEX.md
+│       └── _TEMPLATE.md
 │
 ├── scripts/                  # 确定性逻辑（Phase 3）
 │   └── render_report.py      # analysis.json → report.html（校验 + 渲染）
@@ -79,20 +82,23 @@ life-money-skill/
 │       ├── report.html
 │       └── screenshots/
 │
-└── memory/                   # 跨智能体接手记忆
+└── .gitignore
 ```
+
+> 注：本项目不设 `memory/`（用户决定，2026-09-18）；接手信息以「宪法 + 文件头 + git log」为准。
 
 ## 四、数据流
 
 ```
-用户（访谈 / 简历）
-    │
+用户材料：简历 / 项目报告 / 作品集等（门禁 1）
+    │  访谈补全 → 用户确认信息准确；缺项追问，不猜测
     ▼
 profile.json（Contract 1：career_profile.schema.json）
-    │  ➤ 确认门：用户确认信息准确；缺项追问，不猜测
+    │
     ▼
 7 轮分析（Agent 执行，维度见 §五）
-    │
+    │  分析 1 后 ─▶ 门禁 2：用户选每月额外赚取目标（默认 1000-3000 元/月）
+    │  分析 6 前 ─▶ 门禁 3：用户填每周启动可投入时间（默认 6 小时）
     ▼
 analysis.json（Contract 2：career_analysis.schema.json）
     │
@@ -117,6 +123,8 @@ report.html（终产物）→ 截图 QA → 交付 projects/<run>/
 | 6 | 创建一个由 AI 驱动的副收入来源 | `ai_services` |
 | 7 | 构建我的 90 天计划 | `plan_90d` |
 
+> 执行顺序含三道用户门禁：门禁 1（材料与信息确认，建档收口）→ 门禁 2（分析 1 后、分析 2 前：收入目标）→ 门禁 3（分析 6 前：每周启动时间）。默认值随 `references/analysis-specs.md` 维护。
+
 维度名称、数量、顺序变更 = 破坏性变更，必须经用户批准并同步两个 Schema、分析与报告模板。
 
 ## 六、禁止模式
@@ -139,7 +147,7 @@ report.html（终产物）→ 截图 QA → 交付 projects/<run>/
 
 ### 流程与交付
 
-- ❌ 不跳过 profile 确认门直接进入分析。
+- ❌ 不跳过三道用户门禁（门禁 1 材料与信息确认 / 门禁 2 收入目标 / 门禁 3 每周启动时间）。
 - ❌ 渲染失败 / 未验证不得声称成功；必须读回文件 + 截图验证。
 - ❌ 不自动对外发布报告；生成即终点。
 
@@ -147,7 +155,7 @@ report.html（终产物）→ 截图 QA → 交付 projects/<run>/
 
 ### 文件级元数据
 
-每个 `.md` 文件头部包含：
+领域 / 参考类 `.md` 文件头部包含（`SKILL.md` 以 frontmatter 为准；本宪法以版本头为准）：
 
 ```markdown
 > 路径：<repo-relative-path>
@@ -176,7 +184,7 @@ report.html（终产物）→ 截图 QA → 交付 projects/<run>/
 4. 当前源码、脚本与可读回产物。
 5. 旧提示词、历史总结、实验草稿。
 
-开始任何任务前先读实时仓库；`memory/` 只作定位辅助，事实判断一律回实时仓库。
+开始任何任务前先读实时仓库；事实判断以实时仓库为准，旧总结与历史结论只作定位辅助。
 
 ## 九、变更控制
 

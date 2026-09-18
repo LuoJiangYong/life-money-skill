@@ -7,7 +7,7 @@
   "additionalProperties": true,
   "required": ["schema_version", "meta", "summary", "hidden_skills", "income_opportunities", "monetization_paths", "leverage", "higher_pay_roles", "ai_services", "plan_90d"],
   "properties": {
-    "schema_version": { "const": "0.1" },
+    "schema_version": { "const": "0.2" },
     "meta": {
       "type": "object",
       "required": ["generated_at"],
@@ -73,7 +73,7 @@
       "type": "array",
       "minItems": 5,
       "maxItems": 10,
-      "description": "维度 2「寻找收入机会」。目标 10 条；金额口径对齐用户所在市场",
+      "description": "维度 2「寻找收入机会」。目标 10 条；收入潜力对齐门禁 2 确认目标（income_target），金额口径对齐用户所在市场",
       "items": {
         "type": "object",
         "required": ["title", "description", "startup_cost", "time_investment", "difficulty", "income_potential"],
@@ -144,14 +144,14 @@
       "type": "array",
       "minItems": 3,
       "maxItems": 5,
-      "description": "维度 6「创建一个由 AI 驱动的副收入来源」。目标 5 条，启动投入需 <5 小时 / 周",
+      "description": "维度 6「创建一个由 AI 驱动的副收入来源」。目标 5 条；启动投入不得超过门禁 3 确认的每周可投入时间",
       "items": {
         "type": "object",
         "required": ["name", "description", "weekly_hours"],
         "properties": {
           "name": { "type": "string", "description": "AI 辅助的服务名" },
           "description": { "type": "string" },
-          "weekly_hours": { "type": "number", "maximum": 5, "description": "每周启动所需时间（小时，需 <5）" },
+          "weekly_hours": { "type": "number", "description": "每周启动所需时间（小时），须 ≤ 门禁 3 确认的 launch_hours_per_week" },
           "price_hint": { "type": "string", "description": "定价参考（如有）" }
         }
       }
