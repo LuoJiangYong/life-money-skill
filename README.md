@@ -1,4 +1,4 @@
-# Life Money Skill — 人生搞钱诊断
+# Life Money Skill — 人生搞钱规划Skill
 
 **简体中文** ｜ [English](README.en.md)
 
